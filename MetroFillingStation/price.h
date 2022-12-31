@@ -1,3 +1,9 @@
+
+//update price
+
+
+
+
 double price(int n) {
     FILE *pointer;
 

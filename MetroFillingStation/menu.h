@@ -43,9 +43,9 @@ void show_menu(){
         }
         else{
             // 1->logOut
-            // bill
-            // update_prices
-            // 2->Exit
+            //2-> bill
+            // 3->update_prices
+            // 4->Exit
             system("cls");
             printf("Enter\n  1 -> logOut\n  2 -> billing\n  3 -> Update Prices\n  4 -> Exit\n\n");
             int n;

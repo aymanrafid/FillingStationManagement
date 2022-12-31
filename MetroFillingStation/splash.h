@@ -1,3 +1,8 @@
+
+
+//create ascii image of pump station
+
+
 void splash(){
 printf("                                               ...............................            \n");
 printf("                                              ................................=:          \n");

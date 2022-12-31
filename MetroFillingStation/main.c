@@ -10,9 +10,11 @@
 
 
 int main(void){
+    //asciii image
       splash();
       sleep(5);
       system("cls");
+      //menu list
       show_menu();
       return 0;
 }
