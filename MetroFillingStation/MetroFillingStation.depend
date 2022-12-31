@@ -1,15 +1,18 @@
 # depslib dependency file v1.0
-1672481435 source:e:\codes\git\fillingstationmanagement\metrofillingstation\main.c
+1672482164 source:e:\codes\git\fillingstationmanagement\metrofillingstation\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"login.h"
 	"price.h"
 	"invoice.h"
+	"menu.h"
 
 1672323152 e:\codes\git\fillingstationmanagement\metrofillingstation\login.h
 
 1672480115 e:\codes\git\fillingstationmanagement\metrofillingstation\price.h
 
 1672481489 e:\codes\git\fillingstationmanagement\metrofillingstation\invoice.h
+
+1672482130 e:\codes\git\fillingstationmanagement\metrofillingstation\menu.h
 
