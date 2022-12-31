@@ -1,13 +1,18 @@
 
 int userLoggedIn = 0;
 
+struct User {
+    char id[100];
+    char pass[20];
+};
+
 //Takes userName and password from user
 //Creates a new user
 //sign up succeeds returns 1
 //if fails returns 0
 int signUP(){
-    char user[100];
-    char pass[8];
+    char id[100];
+    char pass[20];
     FILE *pointer;
 
     pointer=fopen("logIn.txt","a");
@@ -18,8 +23,8 @@ int signUP(){
     else{
         fflush(stdin);
         printf("Enter UserName:\t");
-        fgets(user,sizeof user,stdin);
-        fprintf(pointer, "%s",user);
+        fgets(id,sizeof id,stdin);
+        fprintf(pointer, "%s",id);
 
         printf("Enter Password:\t");
         fgets(pass,sizeof pass,stdin);
@@ -36,8 +41,8 @@ int signUP(){
 //log in succeeds and returns 1
 //if fails returns 0
 int logIn(){
-    char user[50][100];
-    char pass[50][8];
+
+    struct User users[50];
     int size = 0;
     int i=0;
     FILE *pointer;
@@ -49,26 +54,26 @@ int logIn(){
     }
     else{
         while(1){
-            char* inputStatus = fgets(user[i],sizeof user[i],pointer);
+            char* inputStatus = fgets(users[i].id,sizeof users[i].id,pointer);
             if(inputStatus == NULL) break;
-            char* inputStatus2 = fgets(pass[i],sizeof pass[i],pointer);
+            char* inputStatus2 = fgets(users[i].pass,sizeof users[i].pass,pointer);
             if(inputStatus == NULL || inputStatus2 == NULL) break;
             i++;
             size++;
         }
 
-        char nuser[100];
-        char gpass[8];
+
+        struct User user1;
 
         fflush(stdin);
 
         printf("Enter UserName:");
-        char* nr=fgets(nuser,sizeof(nuser),stdin);
+        char* nr=fgets(user1.id,sizeof(user1.id),stdin);
         printf("Enter Password:");
-        char* gs=fgets(gpass,sizeof(gpass),stdin);
+        char* gs=fgets(user1.pass,sizeof(user1.pass),stdin);
 
         for(int j=0;j<size;j++) {
-            if(strcmp(nuser,user[j])==0 && strcmp(gpass,pass[j])==0){
+            if(strcmp(user1.id,users[j].id)==0 && strcmp(user1.pass,users[j].pass)==0){
                 return 1;
             }
         }
