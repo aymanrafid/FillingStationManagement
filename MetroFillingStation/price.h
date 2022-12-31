@@ -1,9 +1,8 @@
 
-//update price
 
-
-
-
+//take inputs a integer referring to Petrol/CNG/Diesel/Octane
+//fetch their current price from Prices.txt file
+//returns price according to input
 double price(int n) {
     FILE *pointer;
 
@@ -18,7 +17,9 @@ double price(int n) {
         fflush(stdin);
         fclose(pointer);
 
-        if(n==1) return p;
+        if(n==1) {
+            return p;
+        }
         else if(n==2) return c;
         else if(n==3) return d;
         else if(n==4) return o;
@@ -26,9 +27,14 @@ double price(int n) {
     return -1;
 }
 
+//take input updated prices from user
+//updates the prices in Prices.txt file
+//returns 0 for failure and 1 for success.
 int update_prices() {
      system("cls");
      printf("      Update new Prices\n\n\n");
+
+
 
      double p, c, d, o;
      printf("PETROL: ");

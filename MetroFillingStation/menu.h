@@ -39,6 +39,10 @@ void show_menu(){
             else if (n==3){
                 return;
             }
+            else {
+                printf("wrong input\n");
+                return;
+            }
 
         }
         else{
