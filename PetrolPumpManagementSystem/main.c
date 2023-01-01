@@ -9,7 +9,7 @@
 #include"splash.h"
 
 
-int main(void){
+int main(){
     //asciii image
       splash();
       sleep(5);

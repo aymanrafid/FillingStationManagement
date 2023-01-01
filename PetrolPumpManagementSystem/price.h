@@ -20,9 +20,15 @@ double price(int n) {
         if(n==1) {
             return p;
         }
-        else if(n==2) return c;
-        else if(n==3) return d;
-        else if(n==4) return o;
+        else if(n==2) {
+            return c;
+        }
+        else if(n==3) {
+            return d;
+        }
+        else if(n==4){
+            return o;
+        }
     }
     return -1;
 }
